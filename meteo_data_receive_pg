@@ -94,56 +94,73 @@ $select_st = "SELECT * FROM stations WHERE is_present = true";
 
 									if ($row[7] eq 'hum_out') { $measure = $row_meteo[5]};
 									if ($row[7] eq 'speed_wind') { $measure = $row_meteo[7]};
-#dir wind parsing
+								#dir wind parsing
 									if ($row[7] eq 'dir_wind') { 
-if ($row_meteo[8] eq 'N') {
-$measure = 0;
-};
+										if ($row_meteo[8] eq 'N') {
+										$measure = 0;
+										};
 
-if ($row_meteo[8] eq 'NNE') {
-$measure = 23;
-};
+										if ($row_meteo[8] eq 'NNE') {
+										$measure = 23;
+										};
 
-if ($row_meteo[8] eq 'ENE') {
-$measure = 68;
-};
+										if ($row_meteo[8] eq 'NE') {
+										$measure = 45;
+										};
 
-if ($row_meteo[8] eq 'E') {
-$measure = 90;
-};
+										if ($row_meteo[8] eq 'ENE') {
+										$measure = 68;
+										};
 
-if ($row_meteo[8] eq 'ESE') {
-$measure = 113;
-};
+										if ($row_meteo[8] eq 'E') {
+										$measure = 90;
+										};
 
-if ($row_meteo[8] eq 'SSE') {
-$measure = 158;
-};
+										if ($row_meteo[8] eq 'ESE') {
+										$measure = 113;
+										};
 
-if ($row_meteo[8] eq 'S') {
-$measure = 180;
-};
+										if ($row_meteo[8] eq 'SE') {
+										$measure = 135;
+										};
 
-if ($row_meteo[8] eq 'SSW') {
-$measure = 203;
-};
+										if ($row_meteo[8] eq 'SSE') {
+										$measure = 158;
+										};
 
-if ($row_meteo[8] eq 'SWS') {
-$measure = 248;
-};
+										if ($row_meteo[8] eq 'S') {
+										$measure = 180;
+										};
 
-if ($row_meteo[8] eq 'W') {
-$measure = 270;
-};
+										if ($row_meteo[8] eq 'SWS') {
+										$measure = 203;
+										};
 
-if ($row_meteo[8] eq 'WNW') {
-$measure = 293;
-};
+										if ($row_meteo[8] eq 'SW') {
+										$measure = 225;
+										};
 
-if ($row_meteo[8] eq 'NWN') {
-$measure = 338;
-};
-};
+										if ($row_meteo[8] eq 'WSW') {
+										$measure = 248;
+										};
+
+										if ($row_meteo[8] eq 'W') {
+										$measure = 270;
+										};
+
+										if ($row_meteo[8] eq 'WNW') {
+										$measure = 293;
+										};
+										
+										if ($row_meteo[8] eq 'NW') {
+										$measure = 315;
+										};
+
+										if ($row_meteo[8] eq 'NNW') {
+										$measure = 338;
+										};
+									};
+
 									if ($row[7] eq 'rain') { $measure = $row_meteo[17]};
 									if ($row[7] eq 'uv_dose') { $measure = $row_meteo[23]};
 									if ($row[7] eq 'temp_in') { $measure = $row_meteo[27]};
